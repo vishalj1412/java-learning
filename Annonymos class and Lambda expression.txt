@@ -1,0 +1,70 @@
+Anonymous Class-> it is not actual present class ,used for create expression using this class.we declare it anywhrer and initiate it at that time.
+Anonymous classes enable you to make your code more concise.
+ They enable you to declare and instantiate a class at the same time. They are like local classes except that they do not have a name
+. Use them if you need to use a local class only once.
+Syntax ->
+
+HelloWorld frenchGreeting = new HelloWorld() {
+            String name = "tout le monde";
+            public void greet() {
+                greetSomeone("tout le monde");
+            }
+            public void greetSomeone(String someone) {
+                name = someone;
+                System.out.println("Salut " + name);
+            }
+        };
+in above we create the anonymous class where helloword is the interface and we create the oject of anonymous class which has a no name.
+
+
+
+
+
+Functional Interface->*functional interface has a only one abstract method.
+functonal interface has 4 types
+1)predicate-boolean result.
+*it has a test()method for check result;
+Syntax--
+Predicate<DataType> obj=variable-> str.length()>5
+obj.test("pass here value of variable");
+2)Consumer-no result.
+-consumer only consum data no output return.
+Syntax:-
+Consumer<dataType> obj=variable->
+apply() mwthos 
+3)Function-it takes input and give the output.
+it use apply(i,r) method which has two argument one is input and another is output.
+eg.
+Function<Integer,string> obj=t->t*10+"data is";
+System.out,prinln(apply(2);
+
+4)Supplier-no input only supply.
+get() method used.
+it not take any input it provide output.
+Supplier<Double> obj-()->Math.random();
+System.out.println(obj.get());
+	
+lambda->A lambda expression is a short block of code which takes in parameters and returns a value. 
+->Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+->it is a anonymous function.
+->output of your lambda is fully dependant on abstract method of functional interface.
+
+Syntax:1)()->{};
+2)parameter -> expression
+3)(parameter1, parameter2) -> expression
+3)(parameter1, parameter2) -> { code block }
+eg:
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    numbers.add(5);
+    numbers.add(9);
+    numbers.add(8);
+    numbers.add(1);
+    numbers.forEach( (n) -> { System.out.println(n); } );
+  }
+}
+
+

@@ -1,0 +1,306 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class RayDemos {
+
+    public static void main(String[] args){
+        String[] suit = {"S","D","C","H"};
+        String[] rank = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+        String[] deck = new String[52];
+
+        for (int i = 0; i < deck.length; i++){
+            deck[i] = rank[i%13] + suit[i/13];
+        } //End the loop
+
+        //Shuffle the loop
+        for (int i = 0; i< deck.length; i++){
+            int index = (int)(Math.random()*deck.length);
+
+            String temp = deck[i];
+            deck[i] = deck[index];
+            deck[index] = temp;
+        } //End this for loop
+        //Print the shuffled deck
+        for (String u: deck){
+            System.out.println(u);
+        }
+    }//End main
+}//End class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://stackoverflow.com/questions/22381202/a-jni-error-has-occurred-please-check-your-installation-and-try-again-in-eclips
+
+
+
+
+
+
+
+
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+public class UserDetailsregexTest {
+	@Test
+	public void Test() {
+	
+	UserDetailsByUsingRegics obj=new UserDetailsByUsingRegics();
+	assertTrue(obj.FirstName("Vishal"));
+    assertTrue(obj.LastName("Jagtap"));
+	}
+	
+import java.util.regex.*;
+public class UserDetailsByUsingRegics{
+	
+	public boolean FirstName(String Firstname) {
+		
+		Pattern pat=Pattern.compile("^[A-Z]{1}[a-z]{2}[a-z]*$");
+		Matcher match=pat.matcher(Firstname);
+	   boolean result=match.matches();
+		return result;
+	
+	}	
+public boolean LastName(String LastName){
+		
+		Pattern pat=Pattern.compile("^[A-Z]{1}[a-z]{2}[a-z]*$");
+		Matcher match=pat.matcher(LastName);
+	   boolean result=match.matches();
+		return result;
+	
+  }
+}
+
+}
+-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+public boolean LastName(String LastName){
+		
+		Pattern pat=Pattern.compile("^[A-Z]{1}[a-z]{2}[a-z]*$");
+		Matcher match=pat.matcher(LastName);
+	   boolean result=match.matches();
+		return result;
+	
+	}
+public boolean Email_Id(String email){
+		
+		Pattern pat=Pattern.compile("^[a-z]+[.a-z?]*@(bl+)(.+)(co+)(.in)?$");
+		Matcher match=pat.matcher(email);
+	   boolean result=match.matches();
+		return result;
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+public class Power_Of_Two{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        int pow=1;
+        System.out.println("Enter the Power number");
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int i;
+        for(i=1;i<=n;i++)
+        {
+            pow=pow*2;
+        }
+        System.out.println(pow);
+     }
+}
+
+
+
+
+
+
+
+*************************
+public class HarmonicNumber { 
+    public static void main(String[] args) { 
+
+        // command-line argument
+        int n = Integer.parseInt(args[0]);
+
+        // compute 1/1 + 1/2 + 1/3 + ... + 1/n
+        double sum = 0.0;
+        for (int i = 1; i <= n; i++) {
+            sum += 1.0 / i;
+        }
+
+        // print the nth harmonic number
+        System.out.println(sum);
+    }
+
+}
+
+
+**************prime factors in java*******
+import java.util.Scanner;
+
+public class PrimeFactors {
+   public static void main(String args[]){
+      int number;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter a number ::");
+      number = sc.nextInt();
+     
+      for(int i = 2; i< number; i++) {
+         while(number%i == 0) {
+            System.out.println(i+" ");
+            number = number/i;
+         }
+      }
+      if(number >2) {
+         System.out.println(number);
+      }
+   }
+}
+
+
+******************
+public class QuotientRemainder {
+
+  public static void main(String[] args) {
+
+    int dividend = 25, divisor = 4;
+
+    int quotient = dividend / divisor;
+    int remainder = dividend % divisor;
+
+    System.out.println("Quotient = " + quotient);
+    System.out.println("Remainder = " + remainder);
+  }
+}
+
+
+
+
+*************************
+import java.util.*;
+public class VowelConsonant {
+
+    public static void main(String[] args) {
+    	Scanner scan=new Scanner(System.in);
+       System.out.println("enter the alphabate");
+        char ch =scan.next().charAt(0);
+
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+            System.out.println(ch + " is vowel");
+        else
+            System.out.println(ch + " is consonant");
+
+    }
+}
+
+
+**********************************************************
+import java.util.Scanner;
+public class Biggest_Number 
+{
+    public static void main(String[] args) 
+    {
+        int x, y, z;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the first number:");
+        x = s.nextInt();
+        System.out.print("Enter the second number:");
+        y = s.nextInt();
+        System.out.print("Enter the third number:");
+        z = s.nextInt();
+        if(x > y && x > z)
+        {
+            System.out.println("Largest number is:"+x);
+        }
+        else if(y > z)
+        {
+            System.out.println("Largest number is:"+y);
+        }
+        else
+        {
+            System.out.println("Largest number is:"+z);
+        }
+ 
+    }
+}

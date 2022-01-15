@@ -1,0 +1,19 @@
+Stream->it is sequence of element.
+* it is pipeline of methods.
+*there are two types of methods.
+1)intermidiate methods->
+* range(1,11) method used for define range from 1 to 10.
+eg= IntStream.range(1,11).forEach(x->System.out.println(x));
+hear IntStream is pridefined class.
+*limit(10) it assing limit.
+*Stream.of(10,5,4,6,12,34).filter(x->x>20)
+* .filter(x-> x.contains("j");  //it filter string and gate result which contains j
+*   .map(String::toUppercase);  //it convert string into uppercase which is filtered
+*  .forEach(y-> Systeam.out.println(y))  //it is terminal method which is print each result.
+* Stream.genrate(Math::random).limit(5).forEach(System.out::println)  //it prints 5 random numbers.
+
+*Stream.of(10,5,4,6,12,34).filter(x->x>20).count();    it give count of result.
+
+2)Terminal methods->
+*forEach()
+*count()
